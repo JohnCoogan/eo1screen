@@ -1,0 +1,46 @@
+<html>
+  <head>
+      <title>EO1 Screen - Instagram Feed</title>
+      <!-- Refresh the page every 10 minutes to get new images. -->
+      <meta http-equiv="refresh" content="600">
+      <script type="text/javascript" src="http://www.eo1screen.com/instafeed.min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+        var clientId = 'c697aad820ac4dff9b0a4f8075afae84';
+
+        function setBackground(imgUrl) {
+              var htmlElement = document.getElementsByTagName("html")[0];
+              htmlElement.style.background = "url(" + imgUrl + ") no-repeat center center fixed";
+              htmlElement.style.backgroundSize = "cover";          
+        }
+
+        function handelIG(data) {
+          var firstImgUrl = data.data[0].images.standard_resolution.url;
+          setBackground(firstImgUrl);
+        }
+
+        var pathArray = window.location.pathname.split('/');
+        var pathBase = pathArray[1];
+        var searchKey = pathArray[2];
+        if (pathBase != 'ig') {
+          window.location = "http://www.eo1screen.com";
+        };
+
+        var baseData = {clientId: clientId, 
+                        mock: true, 
+                        success: handelIG,
+                        get: 'tagged',
+                        tagName: searchKey,
+                        sortBy: 'most-recent',
+                        filter: function(image){
+                          return image.likes.count > 10;
+                        }
+                      };
+
+        var feed = new Instafeed(baseData);
+        feed.run();
+
+    </script>
+  </body>
+</html>

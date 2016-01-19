@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EO1 Screen</title>
+  <style type="text/css">
+  html {
+    font-family: monospace;
+  }
+
+  body {
+    margin: 20px;
+    margin-bottom: 60px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h4 {
+    margin-bottom: 5px;
+  }
+
+  /* unvisited, visited, and active link */
+  a {
+      color: #0A139E;
+
+  }
+
+  /* mouse over link */
+  a:hover {
+      color: #980404;
+  }
+
+  .eo1link {
+      font-size: 18px;
+  }
+
+  </style>
+</head>
+<body>
+  <h1>Welcome to EO1 Screen.</h1>
+  <p>This site provides automatically updating image screen-savers for the Electric Objects EO1.</p>
+  <p>In practice, what that means is that your EO1 display will change automatically without needing to open the app.<p>
+  <img src="./images/eo1.jpg" alt="The EO1 Screen" height="486" width="648"/>
+  <p>The feed pulls the latest image from a variety of Twitter feeds and deplays them on a page specifically formatted for the EO1.</p>
+  <p>This means that the images on your EO1 will always be fresh and interesting.</p>
+
+  <h2>How to:</h2>
+  <ol>
+    <li>
+      Copy one of the links below for the screen you would like to show.
+    </li>
+    <li>
+      Visit the Electric Objects custom URL site: <a href="https://www.electricobjects.com/set_url">https://www.electricobjects.com/set_url</a>
+    </li>
+    <li>
+      Paste the copied link (i.e. http://www.eo1screen.com/life) in the "Display URL" field and click <span style="font-weight:bold;">Submit</span>.
+    </li>
+  </ol>
+
+  <h2>Available Displays</h2>
+  <p>These are the available image feeds currently. More coming soon!</p>
+  <div>
+    <div>
+      <h4><a class="eo1link" href="./nasa">NASAGoddardPix</a> - <a href="https://twitter.com/NASAGoddardPix">@NASAGoddardPix on Twitter</a></h4>We share cool science…this is the official image/video tweeting account for @NASAGoddard.
+    </div>
+    <div>
+      <h4><a class="eo1link" href="./earth">EarthPix</a> - <a href="https://twitter.com/EarthPix">@EarthPix on Twitter</a></h4>Amazing pictures of places, people, animals, and nature.
+    </div>
+    <div>
+      <h4><a class="eo1link" href="./history">History In Pics</a> - <a href="https://twitter.com/HistoryInPics">@HistoryInPics on Twitter</a></h4>Sharing the most powerful and entertaining historical photographs ever taken.
+    </div>
+    <div>
+      <h4><a class="eo1link" href="./life">LIFE</a> - <a href="https://twitter.com/LIFE">@LIFE on Twitter</a></h4>Incredible stories and treasured photographs from the LIFE archive.
+    </div>
+    <div>
+      <h4><a class="eo1link" href="./ads">Brilliant_Ads</a> - <a href="https://twitter.com/Brilliant_Ads">@Brilliant_Ads on Twitter</a></h4>The most creative, unique, controversial, remarkable and powerful ads, signs and marketing related things from around the world.
+    </div>
+    <div>
+      <h4><a class="eo1link" href="./archillect">Archillect</a> - <a href="https://twitter.com/archillect">@archillect on Twitter</a></h4>The ocular engine.
+    </div>
+    <div>
+      <h4><a class="eo1link" href="./PhotoBlggr">Photography Blogger</a> - <a href="https://twitter.com/PhotoBlggr">@PhotoBlggr on Twitter</a></h4>Inspiring photographers with some great photography subjects.
+    </div>
+    <div>
+      <h4><a class="eo1link" href="./big_picture">The Big Picture</a> - <a href="https://twitter.com/big_picture">@big_picture on Twitter</a></h4>The Big Picture is a photo blog created by the photo editors of @BostonGlobe, with the best in photojournalism from around the world.
+    </div>
+    <div>
+      <h4><a class="eo1link" href="./TelegraphPics">Telegraph Pictures</a> - <a href="https://twitter.com/TelegraphPics">@TelegraphPics on Twitter</a></h4>Photo galleries and the latest news pictures from http://Telegraph.co.uk
+    </div>
+    <div>
+      <h4><a class="eo1link" href="./nytimesphoto">NYTimes Photo</a> - <a href="https://twitter.com/nytimesphoto">@nytimesphoto on Twitter</a></h4>Tweeting about photography and visual journalism in the news and on our radar.
+    </div>
+    <div>
+      <h4><a class="eo1link" href="./MagnumPhotos">Magnum Photos</a> - <a href="https://twitter.com/MagnumPhotos">@MagnumPhotos on Twitter</a></h4>Magnum Photos is a photographic cooperative of great diversity and distinction owned by its photographer members.
+    </div>
+    <div>
+      <h4><a class="eo1link" href="./500px">500px</a> - <a href="https://twitter.com/500px">@500px on Twitter</a></h4>500px is the premier photography community and licensing marketplace. Follow us for awesome photos every day.
+    </div>
+    <div>
+      <h4><a class="eo1link" href="./GettyImages">Getty Images</a> - <a href="https://twitter.com/GettyImages">@GettyImages on Twitter</a></h4>Moving the world with images.
+    </div>
+    <div>
+      <h4><a class="eo1link" href="./tweegeemee">트의기미</a> - <a href="https://twitter.com/GettyImages">@tweegeemee on Twitter</a></h4>I'm a #Clojure twitterbot by @RogerAllen. Favorite & retweet my images to select them for future genetic algorithm breeding.
+    </div>
+  </div>
+  <h2>Instagram Feed</h2>
+  <p>Enter a hashtag below and you will be taken to a page that pulls the most recent image for that hashtag on Instagram.</p>
+  <input type="text" name="hashtag">
+  <button id="genhashtag" onclick="gethashtag()">Generate Link</button>
+  <div id="hashtaglink"><h3>Link: TBD<h3></div>
+
+  <h2>Contact Info</h2>
+  <p>If you would like to suggest a twitter account for EO1 displaying or just want to get in touch. Please email <a href="mailto:eo1screen@johncoogan.com">eo1screen@johncoogan.com</a>.</p>
+
+  <script type="text/javascript">
+    function gethashtag() {
+      var hashtagInput = document.getElementsByName('hashtag')[0].value.replace("#", "");
+      var hashtagHTML = '<h3>Link: <a href="http://www.eo1screen.com/ig/' + hashtagInput + '">http://www.eo1screen.com/ig/' + hashtagInput + '</a></h3>';
+      var hashResult = document.getElementById('hashtaglink');
+      hashResult.innerHTML = hashtagHTML;
+    }
+  </script>
+</body>
+</html>
